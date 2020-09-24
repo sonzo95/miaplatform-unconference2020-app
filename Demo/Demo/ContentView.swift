@@ -8,12 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    var items = [
-        Guitar(name: "PRS Semi Hollow", description: "Semi-hollow, 24.5\" scale, PRS HSH pickups", imageName: "prs-semi-hollow"),
-        Guitar(name: "PRS Silver Sky", description: "Full-body, 25.5\" scale, PRS single coil pickups", imageName: "prs-silver-sky"),
-        Guitar(name: "PRS Semi Hollow", description: "Full-body, 24.5\" scale, Fender V-mod pickups", imageName: "fender-telecaster"),
-        Guitar(name: "PRS Semi Hollow", description: "Full-body, 25.5\" scale, Seymour Duncan pickups", imageName: "ibanez-rg"),
-    ]
+    
+    @ObservedObject var guitarViewModel: GuitarViewModel
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -21,13 +17,15 @@ struct ContentView: View {
             
             ScrollView {
                 LazyVStack(spacing: 16) {
-                    ForEach(items) {
+                    ForEach(guitarViewModel.guitars) {
                         guitar in
                         GuitarView(guitar: guitar)
                     }
                 }.padding()
             }
-        }
+        }.onAppear(perform: {
+            guitarViewModel.fetch()
+        })
     }
 }
 
@@ -45,15 +43,11 @@ struct GuitarView: View {
     }
 }
 
-struct Guitar: Identifiable {
-    var id = UUID()
-    var name: String
-    var description: String
-    var imageName: String
-}
-
 struct ContentView_Previews: PreviewProvider {
+    
+    static let gvm = GuitarViewModel()
+    
     static var previews: some View {
-        ContentView()
+        ContentView(guitarViewModel: gvm)
     }
 }
