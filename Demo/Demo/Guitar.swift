@@ -12,4 +12,5 @@ struct Guitar: Identifiable {
     var name: String
     var description: String
     var imageName: String
+    var isFavorite = false
 }
