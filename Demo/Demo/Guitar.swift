@@ -6,11 +6,18 @@
 //
 
 import Foundation
+import Combine
 
-struct Guitar: Identifiable {
+class Guitar: Identifiable, ObservableObject {
     var id = UUID()
     var name: String
     var description: String
     var imageName: String
-    var isFavorite = false
+    @Published var isFavorite = false
+    
+    init(name: String, description: String, imageName: String) {
+        self.name = name
+        self.description = description
+        self.imageName = imageName
+    }
 }

@@ -13,6 +13,7 @@
 		BDBA8E3C251BD55800250786 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBA8E3B251BD55800250786 /* ContentView.swift */; };
 		BDBA8E3E251BD55800250786 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDBA8E3D251BD55800250786 /* Assets.xcassets */; };
 		BDBA8E41251BD55800250786 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDBA8E40251BD55800250786 /* Preview Assets.xcassets */; };
+		BDBA8E4B251D35EA00250786 /* GuitarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBA8E4A251D35EA00250786 /* GuitarDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BDBA8E3D251BD55800250786 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDBA8E40251BD55800250786 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BDBA8E42251BD55800250786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDBA8E4A251D35EA00250786 /* GuitarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				BDBA8E3F251BD55800250786 /* Preview Content */,
 				4845A057251D25C700A0E17A /* Guitar.swift */,
 				4845A05A251D260000A0E17A /* GuitarViewModel.swift */,
+				BDBA8E4A251D35EA00250786 /* GuitarDetailView.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDBA8E4B251D35EA00250786 /* GuitarDetailView.swift in Sources */,
 				4845A05B251D260000A0E17A /* GuitarViewModel.swift in Sources */,
 				4845A058251D25C700A0E17A /* Guitar.swift in Sources */,
 				BDBA8E3C251BD55800250786 /* ContentView.swift in Sources */,
