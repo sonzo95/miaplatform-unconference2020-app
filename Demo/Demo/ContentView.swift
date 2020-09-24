@@ -33,7 +33,15 @@ struct GuitarView: View {
         VStack(alignment: .leading, spacing: 0) {
             Image(guitar.imageName).resizable().aspectRatio(contentMode: .fill)
             VStack(alignment: .leading, spacing: 6) {
-                Text(guitar.name).font(.system(size: 24, weight: .semibold, design: .default)).foregroundColor(.init(white: 0.1))
+                HStack {
+                    Text(guitar.name).font(.system(size: 24, weight: .semibold, design: .default)).foregroundColor(.init(white: 0.1))
+                    Spacer()
+                    if guitar.isFavorite {
+                        Image(systemName: "heart.fill").foregroundColor(.red)
+                    } else {
+                        Image(systemName: "heart").foregroundColor(.red)
+                    }
+                }
                 Text(guitar.description).font(.body).foregroundColor(.init(white: 0.4))
             }.padding(EdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16))
         }.background(Color.init(white: 0.97)).cornerRadius(16).shadow(radius: 8)
